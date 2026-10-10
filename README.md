@@ -2,11 +2,11 @@
 
 Gokan 把一屆高康盃從年度設定、社團名單、聯隊與賽事配置，到報名審核、費用核對、領隊會議及檢錄匯出的作業，放進同一套有角色、狀態與資料一致性規則的產品。
 
-**線上展示預定網址：** `https://gokan-showcase.vercel.app`  
-**原始碼倉庫預定網址：** `https://github.com/tingweihu/gokan-open`
-**原始碼倉庫：** 公開網址尚未確認
+**線上展示：** [https://vercel-upload-blond.vercel.app](https://vercel-upload-blond.vercel.app)
 
-展示網址是預定地址，目前無法解析；原始碼倉庫公開網址尚未確認。現在可依[本機查看 Showcase](#本機查看-showcase)操作純前端展示站。展示中的人物、社團、金額與操作結果均為虛構資料。
+**原始碼倉庫：** [https://github.com/tingweihu/gokan-open](https://github.com/tingweihu/gokan-open)
+
+可直接開啟線上展示，也可依[本機查看 Showcase](#本機查看-showcase)操作純前端展示站。展示中的人物、社團、金額與操作結果均為虛構資料。
 
 ## 閱讀導覽
 
@@ -254,7 +254,7 @@ pnpm dev:showcase
 
 本機網址為 `http://127.0.0.1:3100`。執行 `pnpm build:showcase` 可產生 `apps/showcase/out` 靜態檔案；此路徑不需要產品資料庫、API 或 Prisma 引擎。靜態輸出隨附[第三方授權聲明](apps/showcase/public/THIRD_PARTY_NOTICES.txt)。
 
-只看展示時，開啟上列網址，用公開展示帳密切換角色；介面中的「重設展示」會恢復虛構狀態，關閉該終端的 `pnpm dev:showcase`（例如按 Ctrl+C）即可停止本機服務。`pnpm build:showcase` 產出的 `apps/showcase/out` 是可供靜態託管的展示內容；預定公開網址目前尚不可用。
+只看展示時，開啟上列網址，用公開展示帳密切換角色；介面中的「重設展示」會恢復虛構狀態，關閉該終端的 `pnpm dev:showcase`（例如按 Ctrl+C）即可停止本機服務。`pnpm build:showcase` 產出的 `apps/showcase/out` 是可供靜態託管的展示內容；公開展示已於[線上 Showcase](https://vercel-upload-blond.vercel.app)提供。
 
 ### 完整產品本機開發（靜態核對的啟動順序）
 
@@ -299,7 +299,7 @@ Showcase 可依上述獨立路徑安裝與建置；完整產品在全新環境�
 
 下一年度接手時，先確認新 `Activity` 的年度、日期、開放期與狀態，再核對社團、選手來源、聯隊規則、賽事／時程、費率、告知版本及當年度的工作人員與社團指派。既有 [年度路由](apps/api/src/activity.controller.ts)、[賽事與聯隊服務](apps/api/src)及[帳號管理](apps/api/src/accounts.controller.ts)提供分項建立與管理能力；2025 賽事範本只是可預覽、確認套用的範本，**不是**自動複製整個上一年度，也不等於本屆正式規則。真實名單、附件、帳密、權限撤銷及交接應在私有營運環境由主辦核對，不要求主辦直接對資料庫執行 SQL。
 
-展示站日後若要發布，範圍只會是 `apps/showcase/out` 的靜態產物及相應第三方通知，不包含產品 API、資料庫、私有附件或正式帳號。上方兩個網址目前只是預定位置，尚未填入展示的[集中連結設定](apps/showcase/app/public-links.ts)或做雙向連結驗證；公開倉庫及部署狀態須待實際確定後再核對。
+展示站已公開於[線上 Showcase](https://vercel-upload-blond.vercel.app)，發布範圍是 `apps/showcase/out` 的靜態產物及相應第三方通知，不包含產品 API、資料庫、私有附件或正式帳號。[原始碼倉庫](https://github.com/tingweihu/gokan-open)與展示網址已填入[集中連結設定](apps/showcase/app/public-links.ts)。
 
 ### 關於高康盃與康聯
 
