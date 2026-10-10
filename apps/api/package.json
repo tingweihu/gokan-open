@@ -1,0 +1,32 @@
+{
+  "name": "@gokan/api",
+  "version": "0.0.0",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "build": "nest build",
+    "dev": "nest start --watch",
+    "start": "node dist/main.js",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@gokan/auth": "workspace:*",
+    "@gokan/config": "workspace:*",
+    "@nestjs/common": "11.1.28",
+    "@nestjs/core": "11.1.28",
+    "@nestjs/platform-express": "11.1.28",
+    "@prisma/client": "6.19.3",
+    "argon2": "0.43.0",
+    "csv-parse": "^7.0.2",
+    "exceljs": "^4.4.0",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "yauzl": "^3.4.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "11.0.10",
+    "@types/yauzl": "^3.4.0"
+  }
+}

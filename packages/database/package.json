@@ -1,0 +1,20 @@
+{
+  "name": "@gokan/database",
+  "version": "0.0.0",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "build": "node scripts/prisma.mjs generate",
+    "prisma:generate": "node scripts/prisma.mjs generate",
+    "db:migrate": "node scripts/prisma.mjs migrate deploy",
+    "db:migrate:dev": "node scripts/prisma.mjs migrate dev",
+    "db:validate": "node scripts/prisma.mjs validate",
+    "typecheck": "node scripts/prisma.mjs validate"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.3"
+  },
+  "devDependencies": {
+    "prisma": "6.19.3"
+  }
+}
